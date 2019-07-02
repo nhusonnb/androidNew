@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:stretchColumns="*"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_span="3"
+            android:background="#ff0"
+            android:textSize="25sp"
+            android:text="Dong cột"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+
+            android:textSize="25sp"
+            android:text="Dong cột"/>
+        <TextView
+
+            android:textSize="25sp"
+            android:text="Dong cột"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:textSize="25sp"
+            android:text="Dong cột"/>
+        <TextView
+            android:textSize="25sp"
+            android:text="Dong cột"/>
+        <TextView
+            android:textSize="25sp"
+            android:text="Dong cột"/>
+        <TextView
+            android:textSize="25sp"
+            android:text="Dong cột"/>
+    </TableRow>
+</TableLayout>
