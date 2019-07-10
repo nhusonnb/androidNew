@@ -19,7 +19,7 @@
         android:orientation="vertical">
 
         <TextView
-
+            android:id="@+id/tv_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
@@ -36,6 +36,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -45,6 +46,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/tv_login_with_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -54,6 +56,8 @@
         android:textStyle="bold" />
 
     <EditText
+        android:inputType="phone"
+        android:id="@+id/edt_phone_number"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,6 +70,7 @@
     // android:drawableRight="@drawable/facebook"
 
     <RelativeLayout
+        android:id="@+id/rl_login_button"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -75,7 +80,7 @@
 
         <TextView
             android:background="@drawable/login_btn_sbackground_selected"
-            android:id="@+id/dangnhap"
+            android:id="@+id/tv_dangnhap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -95,6 +100,7 @@
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/tv_login_social"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
