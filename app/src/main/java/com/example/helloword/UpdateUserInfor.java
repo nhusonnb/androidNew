@@ -10,48 +10,60 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class UpdateUserInfor extends AppCompatActivity {
-    String k ;
+    String thong_tin;
+    EditText edtPhoneNumber;
+    EditText edtTen, edtEmail, edtDiaChi, edtNgaySinh, edtTinhThanh;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_user_infor);
         init();
-
+        getData();
     }
 
-     void init(){
+    void init() {
+        edtPhoneNumber = findViewById(R.id.edt_so_dien_thoai);
+        thongTin();
+    }
 
-        MainActivity mainActivity;
-        mainActivity = new MainActivity();
-        String phoneNumber = mainActivity.phoneNumbers();
-        EditText sdt;
-        sdt = findViewById(R.id.edt_so_dien_thoai) ;
-        sdt.setText(phoneNumber);
+    void getData() {
+        Intent intent = getIntent();
+        String phoneNumber = intent.getStringExtra("phoneNumberPassword");
+        edtPhoneNumber.setText(phoneNumber);
+    }
 
-        final EditText ten,email,diaChi ;
-        ten = findViewById(R.id.edt_ten) ;
-        email = findViewById(R.id.edt_email);
-        diaChi = findViewById(R.id.edt_dia_chi);
+    void thongTin() {
+        edtTen = findViewById(R.id.edt_ten);
+        edtDiaChi = findViewById(R.id.edt_dia_chi);
+        edtEmail = findViewById(R.id.edt_email);
+        edtNgaySinh = findViewById(R.id.edt_ngay_sinh);
+        edtTinhThanh = findViewById(R.id.edt_tinh_thanh);
 
-        k = ten.getText() + "(" + sdt.getText() + ")";
-        RelativeLayout update;
-        update = findViewById(R.id.rl_dong_y_button) ;
-        update.setOnClickListener(new View.OnClickListener() {
+        RelativeLayout relativeLayout;
+        relativeLayout = findViewById(R.id.rl_dong_y_button);
+        relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ten.getText().equals("") && (email.getText().equals(""))&& (diaChi.getText().equals(""))){
-                    Toast.makeText(UpdateUserInfor.this, "Bạn phải nhập đủ thông tin",
-                            Toast.LENGTH_SHORT).show();
-                }else{
-                    Intent intent;
-                    intent = new Intent(UpdateUserInfor.this,UpdateInformation.class);
-                    startActivity(intent);
-                }
-
+                prepareData();
             }
         });
     }
-    String tenSdt(){
-        return k;
+
+    void prepareData() {
+        User user;
+
+        String name = edtTen.getText().toString();
+        String dateOfBirth = edtNgaySinh.getText().toString();
+        String email = edtEmail.getText().toString();
+        String tinhThanh = edtTinhThanh.getText().toString();
+        String phoneNumber = edtPhoneNumber.getText().toString();
+        user = new User(name,phoneNumber,dateOfBirth,email,tinhThanh);
+
+
+        Intent intent ;
+        intent = new Intent(UpdateUserInfor.this,UpdateInformation.class);
+        intent.putExtra("user" , user) ;
+        startActivity(intent);
     }
 }

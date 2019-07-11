@@ -57,13 +57,15 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show() ;
                     Intent intent;
                     intent = new Intent(MainActivity.this,UpdateUserInfor.class);
+                    // them du lieu vao trong intent , nhét phoneNumber vao trong intent
+                    intent.putExtra("phoneNumberPassword",phoneNumber);
+                    intent.putExtra("name" , "gia tri ") ;
                     startActivity(intent);
                 }else {
                     Toast.makeText(MainActivity.this, "Mời nhập lại", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
     }
     public String phoneNumbers(){
         String phone = k;

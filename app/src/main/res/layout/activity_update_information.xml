@@ -27,6 +27,7 @@
             android:background="@drawable/diem_tich_luy">
 
             <TextView
+                android:layout_marginLeft="20dp"
                 android:id="@+id/tv_diem_tich_luy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -53,13 +54,13 @@
                 android:layout_alignParentRight="true"
                 android:src="@drawable/tien" />
 
-            <view
+            <View
                 android:id="@+id/tv_thanh_ngang"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:layout_below="@+id/tv_diem_tich_luy"
                 android:layout_marginTop="10dp"
-                android:textColor="#ff00"></view>
+                android:textColor="#ff00"></View>
 
             <ImageView
                 android:id="@+id/iv_tich_diem"

@@ -7,7 +7,7 @@
         android:id="@+id/rl_thong_tin"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="10dp">
+        android:layout_marginHorizontal="20dp">
 
         <TextView
             android:id="@+id/tv_thongtin"
@@ -113,7 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_gioi_tinh"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="25dp"
             android:text="Email"
             android:textColor="#1A1A1B"
             android:textSize="15sp"
