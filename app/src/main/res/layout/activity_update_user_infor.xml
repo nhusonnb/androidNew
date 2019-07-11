@@ -1,12 +1,12 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    >
 
     <RelativeLayout
         android:id="@+id/rl_thong_tin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginHorizontal="10dp">
 
         <TextView
@@ -28,7 +28,7 @@
             android:layout_marginTop="50dp"
             android:text="Tên"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -40,7 +40,7 @@
             android:layout_toRightOf="@+id/tv_ten"
             android:gravity="right"
             android:hint="Nguyễn Văn A"
-            android:textSize="25sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tv_so_dien_thoai"
@@ -50,7 +50,7 @@
             android:layout_marginTop="20dp"
             android:text="Số điện thoại"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -62,7 +62,7 @@
             android:layout_toRightOf="@+id/tv_so_dien_thoai"
             android:gravity="right"
             android:hint="+840123456789"
-            android:textSize="25sp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/tv_ngay_sinh"
@@ -72,7 +72,7 @@
             android:layout_marginTop="20dp"
             android:text="Ngày sinh"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -84,7 +84,7 @@
             android:layout_toRightOf="@+id/tv_ngay_sinh"
             android:gravity="right"
             android:hint="Ngày sinh"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/tv_gioi_tinh"
@@ -94,7 +94,7 @@
             android:layout_marginTop="20dp"
             android:text="Giới tính"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -106,7 +106,7 @@
             android:layout_toRightOf="@+id/tv_ngay_sinh"
             android:gravity="right"
             android:hint="Nam"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/tv_email"
@@ -116,7 +116,7 @@
             android:layout_marginTop="20dp"
             android:text="Email"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -128,15 +128,15 @@
             android:layout_toRightOf="@+id/tv_email"
             android:gravity="right"
             android:hint="Email"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
 
         <View
             android:id="@+id/v_thanh_ngan"
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="5dp"
             android:layout_below="@+id/tv_email"
             android:layout_marginTop="35dp"
-            android:layout_marginBottom="10dp"></View>
+            ></View>
 
         <TextView
             android:id="@+id/tv_dia_chi"
@@ -146,7 +146,7 @@
             android:layout_marginTop="10dp"
             android:text="Địa chỉ"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -158,7 +158,7 @@
             android:layout_toRightOf="@+id/tv_dia_chi"
             android:gravity="right"
             android:hint="Địa chỉ"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/tv_tinh_thanh"
@@ -168,7 +168,7 @@
             android:layout_marginTop="30dp"
             android:text="Tỉnh thành"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -180,7 +180,7 @@
             android:layout_toRightOf="@+id/tv_tinh_thanh"
             android:gravity="right"
             android:hint="Tỉnh thành"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/tv_quan_huyen"
@@ -190,7 +190,7 @@
             android:layout_marginTop="20dp"
             android:text="Quận huyện"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -202,7 +202,7 @@
             android:layout_toRightOf="@+id/tv_quan_huyen"
             android:gravity="right"
             android:hint="Quận/huyện"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/tv_phuong_xa"
@@ -212,7 +212,7 @@
             android:layout_marginTop="20dp"
             android:text="Phường xã"
             android:textColor="#1A1A1B"
-            android:textSize="25sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <EditText
@@ -224,7 +224,7 @@
             android:layout_toRightOf="@+id/tv_phuong_xa"
             android:gravity="right"
             android:hint="Phường xã"
-            android:textSize="25dp" />
+            android:textSize="15dp" />
 
 
         <RelativeLayout
@@ -233,7 +233,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/tv_phuong_xa"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="35dp"
             android:background="@drawable/login_btn_sbackground_selected"
             android:clickable="true">
 
@@ -256,5 +256,9 @@
                 android:src="@drawable/phai"
                 android:tint="#FDFDFE" />
         </RelativeLayout>
+        <TextView
+            android:layout_below="@+id/rl_dong_y_button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
     </RelativeLayout>
-</LinearLayout>
+</ScrollView>
