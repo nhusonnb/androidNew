@@ -8,7 +8,7 @@
     <ImageView
 
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="20dp"
         android:src="@mipmap/img_logo" />
@@ -42,7 +42,7 @@
         android:layout_marginLeft="15dp"
         android:text="Xin chào"
         android:textColor="#34302D"
-        android:textSize="49sp"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
     <TextView

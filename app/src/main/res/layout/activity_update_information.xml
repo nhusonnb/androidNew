@@ -3,9 +3,9 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:background="#FDFBCB"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FDFBCB">
 
         <TextView
             android:id="@+id/tv_xin_chao"
@@ -14,7 +14,7 @@
             android:layout_marginHorizontal="15dp"
             android:text="Xin chào , "
             android:textColor="#050505"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <RelativeLayout
@@ -22,39 +22,43 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_xin_chao"
-            android:layout_marginHorizontal="15dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/diem_tich_luy">
 
             <TextView
-                android:layout_marginLeft="20dp"
                 android:id="@+id/tv_diem_tich_luy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Điểm tích Lũy"
                 android:textColor="#242121"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_diem_so"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_toLeftOf="@+id/iv_tien"
                 android:text="3000"
                 android:textColor="#ff00"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iv_tien"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
                 android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
                 android:src="@drawable/tien" />
 
             <View
+                android:layout_marginHorizontal="20dp"
                 android:id="@+id/tv_thanh_ngang"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
@@ -64,10 +68,11 @@
 
             <ImageView
                 android:id="@+id/iv_tich_diem"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
                 android:layout_below="@+id/tv_thanh_ngang"
-                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/tich_diem" />
 
             <TextView
@@ -75,18 +80,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_tich_diem"
+                android:layout_marginLeft="15dp"
                 android:text="Tích điểm"
                 android:textColor="#2B2727"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iv_dung_diem"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:layout_centerHorizontal="true"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
                 android:layout_below="@+id/tv_thanh_ngang"
-                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/dung_diem" />
 
             <TextView
@@ -97,16 +103,17 @@
                 android:layout_centerHorizontal="true"
                 android:text="Dùng điểm"
                 android:textColor="#2B2727"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iv_tien_ich"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
                 android:layout_below="@+id/tv_thanh_ngang"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:src="@drawable/tien_ich" />
 
             <TextView
@@ -115,37 +122,39 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_dung_diem"
                 android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
                 android:text="Tiện ích"
                 android:textColor="#2B2727"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iv_hoi_dap"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
                 android:layout_below="@+id/tv_tich_diem"
-                android:layout_marginTop="35dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
                 android:src="@drawable/hoi_dap" />
 
             <TextView
-
                 android:id="@+id/tv_hoi_dap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_hoi_dap"
+                android:layout_marginLeft="15dp"
                 android:text="Hỏi đáp"
                 android:textColor="#2B2727"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iv_dat_hang"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
                 android:layout_below="@+id/tv_tich_diem"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="15dp"
                 android:src="@drawable/dat_hang" />
 
             <TextView
@@ -156,16 +165,17 @@
                 android:layout_centerHorizontal="true"
                 android:text="Đặt hàng"
                 android:textColor="#2B2727"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/iv_bao_gia"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:layout_alignParentRight="true"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
                 android:layout_below="@+id/tv_tich_diem"
-                android:layout_marginTop="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
                 android:src="@drawable/bao_gia" />
 
             <TextView
@@ -174,153 +184,163 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_hoi_dap"
                 android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
                 android:text="Báo giá"
                 android:textColor="#2B2727"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_trong"
-                android:layout_below="@+id/tv_dat_hang"
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"
+                android:layout_below="@+id/tv_dat_hang" />
 
         </RelativeLayout>
 
         <TextView
             android:id="@+id/tv_tin_tuc"
-            android:textColor="#2B2727"
-            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_diem_tich_luy"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:text="Tin Tức"
-            android:layout_below="@id/rl_diem_tich_luy"
-            android:textSize="30sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:textColor="#2B2727"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <RelativeLayout
-            android:layout_marginHorizontal="15dp"
             android:id="@+id/rl_hinh_1"
-            android:layout_below="@+id/tv_tin_tuc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tin_tuc"
+            android:layout_marginHorizontal="15dp">
+
             <ImageView
-                android:layout_marginTop="15dp"
-                android:layout_marginHorizontal="15dp"
                 android:id="@+id/iv_hinh_1"
-                android:src="@drawable/hinh_ong_nhua_1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/hinh_ong_nhua_1" />
+
             <TextView
                 android:id="@+id/tv_tin_khuyen_mai"
-                android:textColor="#B90B48"
-                android:textStyle="bold"
-               android:layout_marginLeft="40dp"
-                android:textSize="25dp"
-                android:text="Khuyến mãi lên đến 50%"
-                android:layout_marginTop="25dp"
-                android:layout_width="150dp"
-                android:layout_height="70dp" />
-            <RelativeLayout
-                android:layout_marginTop="25dp"
-                android:layout_below="@+id/tv_tin_khuyen_mai"
-                android:id="@+id/rl_chi_tiet"
-                android:clickable="true"
-                android:layout_width="170dp"
+                android:layout_width="100dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="25dp"
+                android:text="Khuyến mãi lên đến 50%"
+                android:textColor="#B90B48"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_chi_tiet"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_tin_khuyen_mai"
                 android:layout_marginLeft="30dp"
-                android:background="@drawable/chi_tiet_km_bacground">
+                android:layout_marginTop="10dp"
+                android:background="@drawable/chi_tiet_km_bacground"
+                android:clickable="true">
+
                 <TextView
-                    android:background="@drawable/chi_tiet_km_bacground"
                     android:id="@+id/tv_chi_tiet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_centerInParent="true"
                     android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/chi_tiet_km_bacground"
+
                     android:text="CHI TIẾT"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:textColor="#2B2727" />
+                    android:textColor="#2B2727"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
                 <ImageView
-                    android:tint="#CC0707"
                     android:id="@+id/hinhanh"
-                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/phai" />
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/phai"
+                    android:tint="#CC0707" />
 
             </RelativeLayout>
 
         </RelativeLayout>
+
         <TextView
             android:id="@+id/tv_khuyen_mai"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:textColor="#2B2727"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:text="Khuyến mãi"
-            android:layout_below="@+id/rl_hinh_1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_hinh_1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Khuyến mãi"
+            android:textColor="#2B2727"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <RelativeLayout
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="15dp"
             android:id="@+id/rl_hinh_2"
-            android:layout_below="@+id/tv_khuyen_mai"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_khuyen_mai"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp">
+
             <ImageView
-                android:src="@drawable/hinh_ong_nhua_2"
                 android:id="@+id/iv_hinh_2"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="150dp"
+                android:src="@drawable/hinh_ong_nhua_2" />
+
             <TextView
                 android:id="@+id/tv_tin_khuyen_mai_2"
-                android:textColor="#B90B48"
-                android:textStyle="bold"
-                android:layout_marginLeft="40dp"
-                android:textSize="25dp"
-                android:text="Khuyến mãi lên đến 50%"
-                android:layout_marginTop="25dp"
-                android:layout_width="150dp"
-                android:layout_height="70dp" />
-            <RelativeLayout
-                android:layout_marginTop="25dp"
-                android:layout_below="@+id/tv_tin_khuyen_mai_2"
-                android:id="@+id/rl_chi_tiet_2"
-                android:clickable="true"
-                android:layout_width="170dp"
+                android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/chi_tiet_km_bacground">
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:text="Khuyến mãi lên đến 50%"
+                android:textColor="#B90B48"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_chi_tiet_2"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_tin_khuyen_mai_2"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/chi_tiet_km_bacground"
+                android:clickable="true">
+
                 <TextView
-                    android:background="@drawable/chi_tiet_km_bacground"
                     android:id="@+id/tv_chi_tiet_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_centerInParent="true"
                     android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/chi_tiet_km_bacground"
                     android:text="CHI TIẾT"
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:textColor="#2B2727" />
+                    android:textColor="#2B2727"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
                 <ImageView
-                    android:tint="#CC0707"
                     android:id="@+id/hinhanh_2"
-                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/phai" />
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/phai"
+                    android:tint="#CC0707" />
 
             </RelativeLayout>
         </RelativeLayout>
-
-
-
     </RelativeLayout>
 </ScrollView>

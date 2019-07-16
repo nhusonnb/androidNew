@@ -7,10 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 public class UpdateUserInfor extends AppCompatActivity {
-    String thong_tin;
     EditText edtPhoneNumber;
     EditText edtTen, edtEmail, edtDiaChi, edtNgaySinh, edtTinhThanh;
 
@@ -60,10 +58,10 @@ public class UpdateUserInfor extends AppCompatActivity {
         String phoneNumber = edtPhoneNumber.getText().toString();
         user = new User(name,phoneNumber,dateOfBirth,email,tinhThanh);
 
-
         Intent intent ;
-        intent = new Intent(UpdateUserInfor.this,UpdateInformation.class);
+        intent = new Intent(UpdateUserInfor.this,UpdateInformation.class) ;
         intent.putExtra("user" , user) ;
         startActivity(intent);
+        finish();
     }
 }
