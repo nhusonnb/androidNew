@@ -209,15 +209,83 @@
             android:textColor="#2B2727"
             android:textSize="20sp"
             android:textStyle="bold" />
-
+// picaso android
         <RelativeLayout
             android:id="@+id/rl_hinh_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_tin_tuc"
             android:layout_marginHorizontal="15dp">
+            <HorizontalScrollView
 
-            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#ff00"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="1000dp"
+                    android:layout_height="match_parent"
+                    android:background="#ff0"
+                    android:orientation="horizontal">
+                   <RelativeLayout
+                       android:layout_width="300dp"
+                       android:layout_height="match_parent"
+                       android:background="#ff0e">
+                       <ImageView
+                           android:src="@drawable/hinh_ong_nhua_1"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:id="@+id/img_first_new"
+                           android:scaleType="centerCrop"/> // vua layout
+                       <TextView
+                           android:background="#68AAAAAA"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:id="@+id/tv_first_title"/>
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="20dp"
+                           android:layout_marginLeft="20dp"
+                           android:layout_alignParentBottom="true"
+                           android:background="#fff"
+                           >
+                           <TextView
+                               android:text="CHI TIẾT"
+                               android:layout_gravity="center"
+                               android:paddingHorizontal="8dp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" />
+                           <ImageView
+                               android:src="@drawable/tenphai"
+                               android:layout_margin="5dp"
+                               android:layout_width="30dp"
+                               android:layout_height="30dp" />
+                       </LinearLayout>
+                   </RelativeLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:background="#124064">
+                        <TextView
+                            android:layout_gravity="center"
+                            android:text="CHI TIET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFEB3B"></LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--<ImageView
                 android:id="@+id/iv_hinh_1"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -268,7 +336,7 @@
                     android:src="@drawable/phai"
                     android:tint="#CC0707" />
 
-            </RelativeLayout>
+            </RelativeLayout>-->
 
         </RelativeLayout>
 

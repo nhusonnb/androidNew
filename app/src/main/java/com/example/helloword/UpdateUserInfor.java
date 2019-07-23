@@ -3,6 +3,7 @@ package com.example.helloword;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -58,8 +59,18 @@ public class UpdateUserInfor extends AppCompatActivity {
         String phoneNumber = edtPhoneNumber.getText().toString();
         user = new User(name,phoneNumber,dateOfBirth,email,tinhThanh);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("dekho" , MODE_PRIVATE) ;
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("xinchao","Xin Chào , " + user.getName() + "(" + user.getPhoneNumber() + ")");
+        editor.putString("hoten",user.getName()) ;
+        editor.putString("sdt",user.getPhoneNumber()) ;
+        editor.putBoolean("isLogin" , true) ;
+        editor.apply();
+
+
+
         Intent intent ;
-        intent = new Intent(UpdateUserInfor.this,UpdateInformation.class) ;
+        intent = new Intent(UpdateUserInfor.this, AccountActivity.class) ;
         intent.putExtra("user" , user) ;
         startActivity(intent);
         finish();

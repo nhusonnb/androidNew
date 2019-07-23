@@ -10,16 +10,20 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class UserInformation extends AppCompatActivity {
     TextView tvLogout;
+    EditText edtTen,edtDiaChi,edtEmail,edtNgaySinh,edtTinhThanh,edtPhoneNumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_information);
         init();
+        getData() ;
     }
 
     void init(){
@@ -27,6 +31,7 @@ public class UserInformation extends AppCompatActivity {
 
         ImageView ivAnhDaiDien;
         ivAnhDaiDien = findViewById(R.id.iv_anh_dai_dien) ;
+
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.drawable.anh_dai_dien) ;
         RoundedBitmapDrawable roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(),bitmap) ;
         roundedBitmapDrawable.setCircular(true);
@@ -40,9 +45,11 @@ public class UserInformation extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("isLogin" , false);
                 editor.apply();
+                getData() ;
 
-                Intent intent1 = new Intent(UserInformation.this , SplatActivity.class) ;
-                startActivity(intent1);
+                prepareData();
+
+
             }
         });
 
@@ -51,10 +58,20 @@ public class UserInformation extends AppCompatActivity {
         TextView tvHoTen,tvSdt;
         tvHoTen = findViewById(R.id.tv_ho_ten) ;
         tvSdt = findViewById(R.id.tv_sdt) ;
-        Intent intent = getIntent() ;
+
+        SharedPreferences sharedPreferences = getSharedPreferences("dekho" , MODE_PRIVATE) ;
+        tvHoTen.setText(sharedPreferences.getString("hoten",""));
+        tvSdt.setText(sharedPreferences.getString("sdt" , ""));
+       /* Intent intent = getIntent() ;
         User user = (User) intent.getSerializableExtra("user") ;
         tvHoTen.setText(user.getName());
-        tvSdt.setText(user.getPhoneNumber());
+        tvSdt.setText(user.getPhoneNumber());*/
     }
+
+    void prepareData() {
+        Intent intent1 ;
+        intent1 = new Intent(UserInformation.this , SplatActivity.class) ;
+        startActivity(intent1) ;
+}
 
 }
