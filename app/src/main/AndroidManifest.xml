@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.helloword">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".recylerView.HistoryActivity"></activity>
+        <activity android:name=".recylerView.places.PlaceActivity"></activity>
+        <activity android:name=".recylerView.HistoryActivity" />
         <activity
             android:name=".SplatActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -22,7 +25,7 @@
         <activity android:name=".UserInformation" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".UpdateUserInfor" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

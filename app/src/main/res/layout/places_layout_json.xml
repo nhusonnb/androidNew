@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_hinh_nen"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#FD8B01"
+        >
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_name_places"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="#0E0D0D"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_is_promotion"
+            android:layout_marginRight="5dp"
+            android:id="@+id/tv_is_mode_detail"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:background="@drawable/buttom_places"
+            android:text="Name"
+            android:textColor="#ff00" />
+        <TextView
+
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:id="@+id/tv_is_promotion"
+            android:textColor="#F8F4F4"
+            android:text="Name"
+            android:background="@drawable/buttom_places2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+           />
+
+    </RelativeLayout>
+    <View
+        android:background="#F8F4F4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"></View>
 
 </LinearLayout>

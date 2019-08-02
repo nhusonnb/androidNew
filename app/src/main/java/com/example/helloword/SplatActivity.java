@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.widget.TextView;
 
 import com.example.helloword.recylerView.HistoryActivity;
+import com.example.helloword.recylerView.places.PlaceActivity;
 
 public class SplatActivity extends AppCompatActivity {
 
@@ -29,7 +30,7 @@ public class SplatActivity extends AppCompatActivity {
                /* SharedPreferences sharedPreferences = getSharedPreferences("dekho", MODE_PRIVATE);
                 boolean isLogin = sharedPreferences.getBoolean("isLogin", false);
                 if (isLogin) {*/
-                    Intent intent = new Intent(SplatActivity.this, HistoryActivity.class);
+                    Intent intent = new Intent(SplatActivity.this, PlaceActivity.class);
                    // tvName.setText(sharedPreferences.getString("xinchao",""));
                     startActivity(intent);
 

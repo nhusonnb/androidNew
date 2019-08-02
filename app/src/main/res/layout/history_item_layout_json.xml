@@ -1,6 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp">
+    <LinearLayout
+        android:weightSum="6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_weight="1"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cirl_profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/tenphai"
+            app:civ_border_width="3dp"
+            app:civ_border_color="#ff00"/>
+        <!--<ImageView
+            android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/iv_hinh_anh"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />-->
+        <LinearLayout
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Bạn đã được cộng 10 điểm"
+                android:id="@+id/tv_cong_diem"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Số dư : "
+                    android:id="@+id/tv_so_du"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text=""
+                    android:textSize="10sp"
+                    android:id="@+id/tv_so_du_tk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Mã giao dịch : "
+                    android:id="@+id/tv_ma_giao_dich"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text=""
+                    android:id="@+id/tv_ma_giao_dichh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:text=""
+                android:id="@+id/tv_thoi_gian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:textColor="#ff00"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="+10đ"
+            android:id="@+id/tv_diem_cong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 
 </LinearLayout>
