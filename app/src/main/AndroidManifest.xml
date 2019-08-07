@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".recylerView.places.PlaceActivity"></activity>
+        <activity android:name=".recylerView.home.Catevory"></activity>
+        <activity android:name=".recylerView.contact.ContactActivity" />
+        <activity android:name=".recylerView.places.PlaceActivity" />
         <activity android:name=".recylerView.HistoryActivity" />
         <activity
             android:name=".SplatActivity"

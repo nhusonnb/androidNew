@@ -26,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PlaceActivity extends AppCompatActivity {
 
     RecyclerView rcPlaces ;
-    ArrayList<Places> data = new ArrayList<>() ;
+    ArrayList<Place> data = new ArrayList<>() ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +57,22 @@ public class PlaceActivity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl("http://150.95.115.192/api/")
                 .build() ;
-        retrofit.create(ServiceAPI.class).getListPlace(jsonObject).
+        retrofit.create(ServiceAPI.class).getListPlace(jsonObject)
+                .enqueue(new Callback<ListPlaceResponse>() {
+                    @Override
+                    public void onResponse(Call<ListPlaceResponse> call, Response<ListPlaceResponse> response) {
+                        data.addAll(response.body().result) ;
+                        config();
+                    }
+
+                    @Override
+                    public void onFailure(Call<ListPlaceResponse> call, Throwable t) {
+
+                    }
+                });
+
+
+        /*retrofit.create(ServiceAPI.class).getListPlace(jsonObject).
                 enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
@@ -90,7 +105,7 @@ public class PlaceActivity extends AppCompatActivity {
 
             }
         });
-
+*/
 
 
 

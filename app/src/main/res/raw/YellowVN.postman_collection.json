@@ -1,0 +1,420 @@
+{
+  "info": {
+    "_postman_id": "d1fdc299-7d8b-4a8d-beb5-74fbd6779524",
+    "name": "YellowVN",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GetListCategoryAndBanner",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{url}}/GetListCategoryAndBanner",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "GetListCategoryAndBanner"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetListPlace",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"cateID\":0,\n\t\"placeID\":0,\n\t\"searchKey\":\"\"\n}"
+        },
+        "url": {
+          "raw": "{{urlTest}}GetListPlace",
+          "host": [
+            "{{urlTest}}GetListPlace"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetListPromotion",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"page\":1,\n\t\"promotionID\":0\n}"
+        },
+        "url": {
+          "raw": "{{url}}GetListPromotion",
+          "host": [
+            "{{url}}GetListPromotion"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetListContact",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"contactID\":0,\n\t\"searchKey\":\"\"\n}"
+        },
+        "url": {
+          "raw": "{{url}}GetListContact",
+          "host": [
+            "{{url}}GetListContact"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"accessToken\":\"ya29.GlslB6R5cJBTHlHIAEat69MLR_e3GHavy1PFI0G_hTbQRzLMtMwWBffzoGbpdvGrcyIO3dICdpmwV3qoBmcAH-y_zL8zPeBJQQdq3kqHGLkCSeGvVPeSIJ_QpTTz\"\n}"
+        },
+        "url": {
+          "raw": "{{url}}Login",
+          "host": [
+            "{{url}}Login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateUser",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Token",
+            "value": "1CDFFF60301BACC84A0F8891B9FA6811",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\t\"name\": \"Trường Thăng Nguyễn\",\n        \"phone\": \"\",\n        \"address\": \"\",\n        \"email\": \"truongthangmt3@gmail.com\",\n        \"emailID\": \"112645033362390914618\",\n        \"kakaotal\": \"\",\n        \"gender\": 1,\n        \"DobStr\": \"11/11/1980\"\n}"
+        },
+        "url": {
+          "raw": "{{url}}UpdateUser",
+          "host": [
+            "{{url}}UpdateUser"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetUsersInfo",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Token",
+            "type": "text",
+            "value": "{{Token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{urlTest}}GetUsersInfo",
+          "host": [
+            "{{urlTest}}GetUsersInfo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ChangeAvatar",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Token",
+            "type": "text",
+            "value": "1CDFFF60301BACC84A0F8891B9FA6811"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "a",
+              "type": "file",
+              "src": "/C:/Users/AnhLee/Desktop/New folder/consulting.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{url}}ChangeAvatar",
+          "host": [
+            "{{url}}ChangeAvatar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UploadImage",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Token",
+            "type": "text",
+            "value": "{{Token}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "1",
+              "type": "file",
+              "src": "/C:/Users/AnhLee/Desktop/New folder/consulting.png"
+            },
+            {
+              "key": "2",
+              "type": "file",
+              "src": "/C:/Users/AnhLee/Desktop/New folder/deliveryf for a move.png"
+            },
+            {
+              "key": "3",
+              "type": "file",
+              "src": "/C:/Users/AnhLee/Desktop/New folder/ic_restauran.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{url}}UploadImage?postID=10",
+          "host": [
+            "{{url}}UploadImage"
+          ],
+          "query": [
+            {
+              "key": "postID",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteImage",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Token",
+            "type": "text",
+            "value": "{{Token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"listUrlID\":[115,116]\n\t\n}"
+        },
+        "url": {
+          "raw": "{{url}}DeleteMedia",
+          "host": [
+            "{{url}}DeleteMedia"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CreatePost",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Token",
+            "type": "text",
+            "value": "{{Token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"Title\":\"bai 2\",\n\t\"Description\":\"Description 2\",\n\t\"CategoryID\":19,\n\t\"Address\":\"Trai dat 5\",\n\t\"ProvinceID\":1,\n\t\"Price\":2000000,\n\t\"IsNegotiable\":1,\n\t\"CustName\":\"Anh ln\",\n\t\"CustPhone\":\"0123456789\",\n\t\"CustAddress\":\"trai dat\",\n\t\"CustKakaotalk\":\"31152052\",\n\t\"CustEmail\":\"anhBeo@gamil.com\",\n\t\"UnitID\":2\n}"
+        },
+        "url": {
+          "raw": "{{url}}CreatePost",
+          "host": [
+            "{{url}}CreatePost"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetUsersPost",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Token",
+            "type": "text",
+            "value": "{{Token}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{url}}GetUsersPost?status=0",
+          "host": [
+            "{{url}}GetUsersPost"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ListUnitAndProvince",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "type": "text",
+            "value": "application/json"
+          },
+          {
+            "key": "Token",
+            "type": "text",
+            "value": "{{Token}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{url}}ListUnitAndProvince",
+          "host": [
+            "{{url}}ListUnitAndProvince"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
